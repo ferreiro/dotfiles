@@ -14,19 +14,17 @@
 
 [alias]
     st = status
-    # sts = status -sb
-    # stl = ls-files -m -o --exclude-standard
+    sts = status -sb
+    stl = ls-files -m -o --exclude-standard
+    l  = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    ll = log --pretty=oneline --graph --abbrev-commit
+    lg = log -p
     # ci = commit
     # br = branch
     # co = checkout
     # cr = clone --recursive
     # df = diff --word-diff
     # unstage = reset --hard HEAD
-    superlog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    ll = log --pretty=oneline --graph --abbrev-commit
-    lm = log --pretty=format:'* %s (%h)'
-    lg = log -p
     # g = grep --break --heading --line-number
     # amend = commit --amend --reuse-message=HEAD
     # contrib = shortlog --summary --numbered
@@ -34,10 +32,8 @@
     # ld = "!sh -c \"git log --since '${1:-1} days ago' --oneline --author $(git config user.email)\" -"
     # pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 
-
-# credential.helper=osxkeychain
 [credential]
-    helper = osxkeychain
+    helper = osxkeychain # credential.helper=osxkeychain
 
 # [pager]
 # 	diff = diff-so-fancy | less --tabs=4 -RFX
