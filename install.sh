@@ -9,8 +9,8 @@ EXTRA_DIR="$HOME/.extra"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # Symbolic links
-ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
-ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
+ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
+ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 
 # Install Package managers and programs
 . "$DOTFILES_DIR/install/brew.sh"
