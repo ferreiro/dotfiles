@@ -47,4 +47,5 @@ mac_applications=(
     webstorm
 )
 
-brew cask install "${mac_applications[@]}"
+# DEBUG
+# brew cask install "${mac_applications[@]}"

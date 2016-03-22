@@ -28,9 +28,9 @@ apps=(vim tree wget)
 # Install system tools
 packages=(go git git-lfs ruby node wget python python3 redis)
 
-brew install "${apps[@]}"
-brew install "${packages[@]}"
-
+# DEBUG
+# brew install "${apps[@]}"
+# brew install "${packages[@]}"
 
 
 brew cleanup # Remove outdated versions from the cellar.

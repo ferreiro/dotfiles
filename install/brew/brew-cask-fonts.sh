@@ -34,5 +34,6 @@ fonts=(
     font-source-serif-pro
 )
 
-brew cask install "${fonts[@]}"
+# DEBUG
+# brew cask install "${fonts[@]}"
 echo_warn "[ INSTALLED ] System fonts..."
