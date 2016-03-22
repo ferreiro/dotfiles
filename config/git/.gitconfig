@@ -35,9 +35,11 @@
 [credential]
     helper = osxkeychain # credential.helper=osxkeychain
 
-# [pager]
-# 	diff = diff-so-fancy | less --tabs=4 -RFX
-# 	show = diff-so-fancy | less --tabs=4 -RFX
+[pager]
+    # requires diff-so-fancy to be installed from install/brew/brew.sh
+    # Source repository: https://github.com/so-fancy/diff-so-fancy
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
 
 
 [color]

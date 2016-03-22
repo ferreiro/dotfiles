@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap homebrew/versions
+brew tap homebrew/dupes
+brew tap Goles/battery
+brew update
+brew upgrade
+
 # Install command-line tools using Homebrew.
 # Ask for the administrator password upfront.
 sudo -v
