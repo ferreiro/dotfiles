@@ -2,8 +2,14 @@
 ### Brew cask fonts
 ###########################################
 
-echo_warn "Brew cask fonts"
-echo_warn "[ INSTALLING ] System fonts..."
+echo ""
+echo "***********************"
+echo "*** Brew cask fonts ***"
+echo "***********************"
+
+echo ""
+echo "INSTALLING System fonts..."
+echo ""
 
 brew tap caskroom/fonts
 
@@ -34,6 +40,8 @@ fonts=(
     font-source-serif-pro
 )
 
-# DEBUG
-# brew cask install "${fonts[@]}"
-echo_warn "[ INSTALLED ] System fonts..."
+brew cask install "${fonts[@]}"
+
+echo ""
+echo "INSTALLED System fonts..."
+echo ""
