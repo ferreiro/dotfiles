@@ -35,3 +35,15 @@ bin
 # Logs and databases #
 ######################
 *.log
+
+##################
+# Sensitive data #
+##################
+# Taken from: https://goo.gl/rGBfUW
+
+.private
+private
+license.plist
+.ssh
+id_rsa
+id_rsa.pub

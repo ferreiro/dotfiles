@@ -52,6 +52,7 @@ applications=(
     ### CHATS ###
     skype
     slack
+    telegram
     google-hangouts
 
     ### MULTIMEDIA ###
@@ -62,6 +63,7 @@ applications=(
     imageoptim # image optimizer
     licecap # record screen and make gif
     screenflow # Screen Recording
+    licecap # animation screen
 
     ### OTHERS ###
     mactracker
@@ -74,6 +76,7 @@ applications=(
     cheatsheet
     virtualbox #  virtualization software
     #clamxav # antivirus
+    Zeplin
 
 )
 
@@ -89,6 +92,7 @@ applications_to_open=(
     "google drive"
     spotify
     imageoptim
+    licecap
 )
 
 for i in "${applications_to_open[@]}"
