@@ -23,11 +23,12 @@ EXTRA_DIR="$HOME/.extra"
 ### Add Symbolic links to configuration files ###
 #################################################
 
-ln -sfv "$DOTFILES_DIR/config/.atom" ~
 ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
+ln -sfv "$DOTFILES_DIR/config/.atom" ~
+ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 
 #####################################
 ### Install Programs and binaries ###
