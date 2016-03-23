@@ -23,7 +23,7 @@ echo ""
 
 applications=(
 
-    ### IMPRESCINDIBLES ###
+    ### ESSENTIALS ###
     flux
     iterm2
     cleanmymac
@@ -44,10 +44,11 @@ applications=(
     sublime-text3
     webstorm # Javascript IDE
 
-    ### PROGRAMMING ###
+    ### DEVELOPMENT ###
     dash
     sourcetree # Git IDE
     dockertoolbox # https://www.docker.com/products/docker-toolbox
+    zeplin
 
     ### CHATS ###
     skype
@@ -76,7 +77,7 @@ applications=(
     cheatsheet
     virtualbox #  virtualization software
     #clamxav # antivirus
-    Zeplin
+    #easyfind # finder with steroids
 
 )
 
