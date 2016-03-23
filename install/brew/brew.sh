@@ -47,6 +47,7 @@ binaries=(
     diff-so-fancy # used on .gitconfig [pager]
     wget
     tree
+    dark-mode # Set dark mode
 
     ### DATABASES ###
     redis
@@ -64,6 +65,10 @@ binaries=(
 
 brew install "${binaries[@]}"
 brew cleanup # Remove outdated versions from the cellar.
+
+# Put dark Mode
+# force a specific mode
+dark-mode --mode Dark
 
 
 # # Install Bash 4.
