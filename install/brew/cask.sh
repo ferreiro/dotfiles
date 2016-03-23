@@ -71,8 +71,9 @@ applications=(
     spark # Shortcuts manager
     android-file-transfer
     hammerspoon
+    cheatsheet
     #clamxav # antivirus
-    #virtualbox
+    virtualbox #  virtualization software
 
 )
 

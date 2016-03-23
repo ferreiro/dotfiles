@@ -12,7 +12,25 @@ EXTRA_DIR="$HOME/.extra"
 ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 
+
+# Install command-line tools using Homebrew.
+# Ask for the administrator password upfront.
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+
 # Install Package managers and programs
+
 . "$DOTFILES_DIR/install/brew/brew.sh"
-. "$DOTFILES_DIR/install/brew/cask.sh"
-. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+#. "$DOTFILES_DIR/install/brew/cask.sh"
+#. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+
+
+
+##############################
+### Configure GIST account ###
+##############################
+
+gist --login # https://github.com/defunkt/gist
