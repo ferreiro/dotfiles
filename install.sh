@@ -33,10 +33,11 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 ### Install Programs and binaries ###
 #####################################
 
-. "$DOTFILES_DIR/install/brew/brew.sh"
+. "$DOTFILES_DIR/install/brew/brew.sh" # This must be go first here
 . "$DOTFILES_DIR/install/brew/cask.sh"
 . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
 . "$DOTFILES_DIR/install/app_store/install.sh"
+. "$DOTFILES_DIR/install/atom.sh"
 . "$DOTFILES_DIR/install/bash.sh"
 
 #####################################
