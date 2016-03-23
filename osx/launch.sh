@@ -8,6 +8,10 @@ echo
 echo "SETTING MAC Defaults..."
 echo
 
+############################
+### Setting mac defaults ###
+############################
+
 for DEFAULTS_FILE in "$DOTFILES_DIR"/osx/defaults/*.sh; do
     echo "Applying $DEFAULTS_FILE" && . "$DEFAULTS_FILE"
 done
