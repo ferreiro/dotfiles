@@ -23,7 +23,8 @@ EXTRA_DIR="$HOME/.extra"
 ### Add Symbolic links to configuration files ###
 #################################################
 
-#ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/config/.atom" ~
+ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
@@ -32,11 +33,11 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 ### Install Programs and binaries ###
 #####################################
 
-# . "$DOTFILES_DIR/install/brew/brew.sh"
-# . "$DOTFILES_DIR/install/brew/cask.sh"
-# . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
-# . "$DOTFILES_DIR/install/app_store/install.sh"
-# . "$DOTFILES_DIR/install/bash.sh"
+. "$DOTFILES_DIR/install/brew/brew.sh"
+. "$DOTFILES_DIR/install/brew/cask.sh"
+. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+. "$DOTFILES_DIR/install/app_store/install.sh"
+. "$DOTFILES_DIR/install/bash.sh"
 
 #####################################
 ### SETING OSX: DEFAULTS AND DOCK ###
@@ -48,4 +49,4 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 ### Configure GIST account ###
 ##############################
 
-#gist --login # https://github.com/defunkt/gist
+gist --login # https://github.com/defunkt/gist
