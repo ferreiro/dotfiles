@@ -48,6 +48,8 @@ binaries=(
     wget
     tree
     dark-mode # Set dark mode
+    fasd # Productivity for the command line >> https://github.com/clvv/fasd#install
+    nvm # Node Version Manager - Simple bash script to manage multiple active node.js versions
 
     ### DATABASES ###
     redis
