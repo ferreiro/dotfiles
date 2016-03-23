@@ -1,51 +1,102 @@
+###########################################
+### Brew cask programs
+###########################################
+
+echo ""
+echo "**************************"
+echo "*** Brew cask programs ***"
+echo "**************************"
+echo ""
+
 # Install Caskroom
 brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
 
-##################################
-######## INSTALL PROGRAMS ########
-##################################
+echo ""
+echo "INSTALLING MAC Applications..."
+echo ""
 
-echo_warn "Installing fonts..."
+##########################################
+### Install the following applications ###
+##########################################
 
-mac_applications=(
-    google-chrome
-    opera
-    firefox
-    google-hangouts
-    google-drive
-    dash
-    atom
-    dropbox
-    google-drive
-    sublime-text3
-    spotify
-    skype
-    mactracker
-    imageoptim # image optimizer
-    slack
-    vlc
+applications=(
+
+    ### IMPRESCINDIBLES ###
     flux
-    macdown
-    licecap # record screen and make gifs
-    slate # snapshot
-    cyberduck
-    clamxav # antivirus
-    spark # Shortcuts manager
-    the-unarchiver
-    dockertoolbox
+    iterm2
+    cleanmymac
+    the-unarchiver # zips, rar, and more
 
+    ### BROWSERS ###
+    opera
+    google-chrome
+    firefoxdeveloperedition
+
+    ### CLOUD / STORAGE ###
+    google-drive
+    dropbox
+
+    ### TEXT  EDITORS / IDES ###
+    atom
+    macdown
+    sublime-text3
+    webstorm # Javascript IDE
+
+    ### PROGRAMMING ###
+    dash
+    sourcetree # Git IDE
+    dockertoolbox # https://www.docker.com/products/docker-toolbox
+
+    ### CHATS ###
+    skype
+    slack
+    google-hangouts
+
+    ### MULTIMEDIA ###
+    vlc
+    vox
+    spotify
+    slate # snapshot
+    imageoptim # image optimizer
+    licecap # record screen and make gif
+    screenflow # Screen Recording
+
+    ### OTHERS ###
+    mactracker
+    cyberduck # FTP
+    transmit # FTP. Paid application
+    little-snitch # Network analyzer
+    spark # Shortcuts manager
     android-file-transfer
-    glimmerblocker
     hammerspoon
-    kaleidoscope
-    screenflow
-    sourcetree
-    transmit
-    virtualbox
-    webstorm
+    #clamxav # antivirus
+    #virtualbox
+
 )
 
-# DEBUG
-# brew cask install "${mac_applications[@]}"
+brew cask install "${applications[@]}"
+
+########################################################
+### Launch the following applications to set them up ###
+########################################################
+
+applications_to_open=(
+    #flux
+    dropbox
+    "google drive"
+    spotify
+    imageoptim
+)
+
+for i in "${applications_to_open[@]}"
+do
+    echo "=> Opening:" $i
+    open -a "$i"
+done
+
+
+echo ""
+echo "INSTALLED MAC Applications..."
+echo ""
