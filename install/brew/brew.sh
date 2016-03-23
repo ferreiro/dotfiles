@@ -1,21 +1,17 @@
 #!/usr/bin/env bash
 
+##############################################
+#### Install Homebrew and extra utilities ####
+##############################################
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
 brew tap homebrew/dupes
 brew tap Goles/battery
-brew update
-brew upgrade
-
-# Install command-line tools using Homebrew.
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 brew update # Make sure we’re using the latest Homebrew.
 brew upgrade --all # Upgrade any already-installed formulae.
+brew upgrade
+
 brew install coreutils # Install GNU core utilities (those that come with OS X are outdated).
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 
@@ -23,18 +19,47 @@ brew install moreutils # Install some other useful utilities like `sponge`.
 brew install findutils # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install gnu-sed --with-default-names # Install GNU `sed`, overwriting the built-in `sed`.
 
-apps=(vim tree wget)
+###########################################################
+####  Install more recent versions of some OS X tools. ####
+###########################################################
 
-# Install system tools
-packages=(go git git-lfs ruby node wget python python3 redis)
+brew install vim --override-system-vi
+brew install homebrew/dupes/grep
+brew install homebrew/dupes/openssh
+brew install homebrew/dupes/screen
+brew install homebrew/php/php56 --with-gmp
 
-# DEBUG
-# brew install "${apps[@]}"
-# brew install "${packages[@]}"
+#########################################
+#### Tools and programming languages ####
+#########################################
 
+binaries=(
 
+    ### TOOLS ###
+    git
+    gist # https://github.com/defunkt/gist
+    git-lfs
+    wget
+    vim
+    tree
+    diff-so-fancy # used for .gitconfig [pager]
+
+    ### DATABASES ###
+    redis
+    mongodb
+    postgresql
+    apache-spark
+
+    ### LANGUAGES ###
+    go
+    ruby
+    node
+    python
+    python3
+)
+
+brew install "${binaries[@]}"
 brew cleanup # Remove outdated versions from the cellar.
-
 
 
 # # Install Bash 4.
