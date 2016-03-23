@@ -2,8 +2,6 @@
 # Dock                                                                        #
 ###############################################################################
 
-defaults delete com.apple.dock
-
 # Dock in the left of the screen
 defaults write com.apple.dock orientation -string "left"
 defaults write com.apple.dock pinning -string "end"
