@@ -30,13 +30,10 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 ### Install Programs and binaries ###
 #####################################
 
-install_binaries () {
-  . "$DOTFILES_DIR/install/brew/brew.sh"
-  . "$DOTFILES_DIR/install/brew/cask.sh"
-  . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
-}
-
-#install_binaries()
+# . "$DOTFILES_DIR/install/brew/brew.sh"
+# . "$DOTFILES_DIR/install/brew/cask.sh"
+# . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+. "$DOTFILES_DIR/install/app_store/install.sh"
 
 #####################################
 ### SETING OSX: DEFAULTS AND DOCK ###
@@ -50,6 +47,14 @@ for DEFAULTS_FILE in "$DOTFILES_DIR"/osx/defaults/*.sh; do
 done
 
 echo "Done. Some changes may require a logout/restart to take effect."
+
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
+
+for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "SystemUIServer" "iCal"; do
+    killall "${app}" &> /dev/null
+done
 
 # sub_osx () {
 #     for DEFAULTS_FILE in "$DOTFILES_DIR"/osx/defaults*.sh; do
