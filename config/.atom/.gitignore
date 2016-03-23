@@ -1,0 +1,17 @@
+blob-store
+compile-cache
+dev
+.node-gyp
+.npm
+
+### Don't include packages ###
+### We install them on install/atom.sh ###
+
+packages
+storage
+
+
+### Don't include atom package manager
+
+.apm
+apm

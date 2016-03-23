@@ -1,0 +1,16 @@
+"*":
+  core:
+    disabledPackages: [
+      "metrics"
+      "language-php"
+      "exception-reporting"
+      "tabs-to-spaces"
+      "script"
+    ]
+  editor:
+    invisibles: {}
+  minimap: {}
+  pigments:
+    mergeColorDuplicates: true
+  welcome:
+    showOnStartup: false
