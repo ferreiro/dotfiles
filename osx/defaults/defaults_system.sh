@@ -1,23 +1,23 @@
 # Sources: https://github.com/webpro/dotfiles/blob/c55045c692088105dce3545637d8ab80f120908f/osx/defaults.sh
 # Source2: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-COMPUTER_NAME="George"
-
 # Here we go.. ask for the administrator password upfront and run a
 # keep-alive to update existing `sudo` time stamp until script has finished
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-###############################################################################
-# General UI/UX                                                               #
-###############################################################################
+#######################
+### SYSTEM ###
+######################
 
-# Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "$COMPUTER_NAME"
-sudo scutil --set HostName "$COMPUTER_NAME"
-sudo scutil --set LocalHostName "$COMPUTER_NAME"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
+# Enable Dark Mode
+defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
 # # Set standby delay to 24 hours (default is 1 hour)
 # sudo pmset -a standbydelay 86400
@@ -25,17 +25,9 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # # Disable audio feedback when volume is changed
 # defaults write com.apple.sound.beep.feedback -bool false
 #
-# # Disable the sound effects on boot
-# sudo nvram SystemAudioVolume=" "
-#
-# # Menu bar: disable transparency
-# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
-#
-# # Menu bar: hide the useless Time Machine and Volume icons
-# defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
-#
-# # Menu bar: show battery percentage
-# defaults write com.apple.menuextra.battery -bool true
+
+
+
 #
 # # Disable opening and closing window animations
 # defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -73,8 +65,7 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # # Disable smart dashes, they're annoying when typing code
 # defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 #
-# # Check for software updates daily, not just once per week
-# defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
 #
 # ###############################################################################
 # # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -163,85 +154,8 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # # Enable subpixel font rendering on non-Apple LCDs
 # defaults write NSGlobalDomain AppleFontSmoothing -int 2
 #
-# ###############################################################################
-# # Finder                                                                      #
-# ###############################################################################
-#
-# # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-# defaults write com.apple.finder QuitMenuItem -bool true
-#
-# # Finder: disable window animations and Get Info animations
-# defaults write com.apple.finder DisableAllAnimations -bool true
-#
-# # Finder: show hidden files by default
-# defaults write com.apple.finder AppleShowAllFiles -bool true
-#
-# # Finder: show all filename extensions
-# defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-#
-# # Finder: show status bar
-# defaults write com.apple.finder ShowStatusBar -bool true
-#
-# # Finder: show path bar
-# defaults write com.apple.finder ShowPathbar -bool true
-#
-# # Finder: allow text selection in Quick Look
-# defaults write com.apple.finder QLEnableTextSelection -bool true
-#
-# # Display full POSIX path as Finder window title
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-#
-# # When performing a search, search the current folder by default
-# defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
-#
-# # Disable the warning when changing a file extension
-# defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-#
-# # Avoid creating .DS_Store files on network volumes
-# defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-#
-# # Disable disk image verification
-# defaults write com.apple.frameworks.diskimages skip-verify -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-# defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
-#
-# # Use AirDrop over every interface.
-# defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
-#
-# # Always open everything in Finder's list view.
-# # Use list view in all Finder windows by default
-# # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
-# defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-#
-# # Disable the warning before emptying the Trash
-# defaults write com.apple.finder WarnOnEmptyTrash -bool false
-#
-# # Enable the MacBook Air SuperDrive on any Mac
-# sudo nvram boot-args="mbasd=1"
-#
-# # Expand the following File Info panes:
-# # “General”, “Open with”, and “Sharing & Permissions”
-# defaults write com.apple.finder FXInfoPanesExpanded -dict General -bool true OpenWith -bool true Privileges -bool true
-#
-# ###############################################################################
-# # Dock                                                                        #
-# ###############################################################################
-#
-# # Show indicator lights for open applications in the Dock
-# defaults write com.apple.dock show-process-indicators -bool true
-#
-# # Don’t animate opening applications from the Dock
-# defaults write com.apple.dock launchanim -bool false
-#
-# # Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
-#
-# # Make Dock icons of hidden applications translucent
-# defaults write com.apple.dock showhidden -bool true
-#
-# # No bouncing icons
-# defaults write com.apple.dock no-bouncing -bool true
-#
+
+
 # ###############################################################################
 # # Dashboard                                                                   #
 # ###############################################################################
@@ -441,10 +355,3 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 # # Disable local Time Machine snapshots
 # sudo tmutil disablelocal
 #
-# ###############################################################################
-# # Kill affected applications                                                  #
-# ###############################################################################
-#
-# for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "Safari" "SystemUIServer" "iCal"; do
-#     killall "${app}" &> /dev/null
-# done
