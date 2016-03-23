@@ -24,8 +24,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Install Package managers and programs
 
 . "$DOTFILES_DIR/install/brew/brew.sh"
-#. "$DOTFILES_DIR/install/brew/cask.sh"
-#. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+. "$DOTFILES_DIR/install/brew/cask.sh"
+. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
 
 
 

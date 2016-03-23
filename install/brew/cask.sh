@@ -68,12 +68,12 @@ applications=(
     cyberduck # FTP
     transmit # FTP. Paid application
     little-snitch # Network analyzer
+    hammerspoon # This is a tool for powerful automation of OS X
     spark # Shortcuts manager
     android-file-transfer
-    hammerspoon
     cheatsheet
-    #clamxav # antivirus
     virtualbox #  virtualization software
+    #clamxav # antivirus
 
 )
 
@@ -84,7 +84,7 @@ brew cask install "${applications[@]}"
 ########################################################
 
 applications_to_open=(
-    #flux
+    flux
     dropbox
     "google drive"
     spotify
