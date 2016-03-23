@@ -34,6 +34,7 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 # . "$DOTFILES_DIR/install/brew/cask.sh"
 # . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
 # . "$DOTFILES_DIR/install/app_store/install.sh"
+# . "$DOTFILES_DIR/install/bash.sh"
 
 #####################################
 ### SETING OSX: DEFAULTS AND DOCK ###
