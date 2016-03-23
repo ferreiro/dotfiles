@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
-# Ask for the administrator password upfront.
+# Here we go.. ask for the administrator password upfront and run a
+# keep-alive to update existing `sudo` time stamp until script has finished
 sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###################################################
@@ -32,14 +30,38 @@ ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 ### Install Programs and binaries ###
 #####################################
 
-. "$DOTFILES_DIR/install/brew/brew.sh"
-. "$DOTFILES_DIR/install/brew/cask.sh"
-. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+install_binaries () {
+  . "$DOTFILES_DIR/install/brew/brew.sh"
+  . "$DOTFILES_DIR/install/brew/cask.sh"
+  . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
+}
 
+#install_binaries()
 
+#####################################
+### SETING OSX: DEFAULTS AND DOCK ###
+####################################
+
+# Setting dock applications
+. "$DOTFILES_DIR/osx/dock.sh"
+
+for DEFAULTS_FILE in "$DOTFILES_DIR"/osx/defaults/*.sh; do
+    echo "Applying $DEFAULTS_FILE" && . "$DEFAULTS_FILE"
+done
+
+echo "Done. Some changes may require a logout/restart to take effect."
+
+# sub_osx () {
+#     for DEFAULTS_FILE in "$DOTFILES_DIR"/osx/defaults*.sh; do
+#         echo "Applying $DEFAULTS_FILE" && . "$DEFAULTS_FILE"
+#     done
+#     echo "Done. Some changes may require a logout/restart to take effect."
+# }
+#
+# sub_osx ()
 
 ##############################
 ### Configure GIST account ###
 ##############################
 
-gist --login # https://github.com/defunkt/gist
+#gist --login # https://github.com/defunkt/gist
