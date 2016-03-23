@@ -51,4 +51,4 @@ ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 ### Configure GIST account ###
 ##############################
 
-gist --login # https://github.com/defunkt/gist
+. "$DOTFILES_DIR/install/gist.sh"
