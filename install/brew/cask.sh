@@ -32,6 +32,7 @@ applications=(
     ### BROWSERS ###
     opera
     google-chrome
+    google-chrome-canary
     firefoxdeveloperedition
 
     ### CLOUD / STORAGE ###
@@ -49,6 +50,7 @@ applications=(
     sourcetree # Git IDE
     dockertoolbox # https://www.docker.com/products/docker-toolbox
     zeplin
+    mongohub
 
     ### CHATS ###
     skype
