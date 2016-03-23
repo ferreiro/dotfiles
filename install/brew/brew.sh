@@ -36,13 +36,16 @@ brew install homebrew/php/php56 --with-gmp
 binaries=(
 
     ### TOOLS ###
+    vim
     git
     gist # https://github.com/defunkt/gist
     git-lfs
+    cmake
+    dockutil # Add/remove dock icons
+    bash-completion2
+    diff-so-fancy # used on .gitconfig [pager]
     wget
-    vim
     tree
-    diff-so-fancy # used for .gitconfig [pager]
 
     ### DATABASES ###
     redis
