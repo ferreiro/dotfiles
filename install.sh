@@ -53,6 +53,12 @@ mount_symbolic_links
 
 . "$DOTFILES_DIR/osx/launch.sh"
 
+###@##################
+### SET UP FOLDERS ###
+###@##################
+
+. "$DOTFILES_DIR/setup/my_documents.sh"
+
 ##############################
 ### Configure GIST account ###
 ##############################
