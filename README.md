@@ -1,4 +1,6 @@
-<center><img src="./assets/logo_round_v1_large.png" width="550px" /></center>
+<p align="center">
+	<img src="./assets/logo_round_v1_large.png" width="550px" />
+</p>
 
 <br />
 
