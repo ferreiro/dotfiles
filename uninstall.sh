@@ -14,7 +14,7 @@ EXTRA_DIR="$HOME/.extra"
 echo "Warning! Uninstall is not finished chet and may produce some undesired actions"
 echo "Please. Don't run this script unless you're sure."
 
-read -p "Are you sure? (yes/no)" -n 1 -r
+read -p "Are you sure? [y/N]" -n 1 -r
 echo    # (optional) move to a new line
 
 if [[ $REPLY =~ ^[Nn]$ ]]
@@ -98,8 +98,10 @@ else
   brew cask list | xargs brew cask uninstall --force
 fi
 
-
 ### Kill all to apply changes ###
 killall Dock
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+
 
 exit 1
