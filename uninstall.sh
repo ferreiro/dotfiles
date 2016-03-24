@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Warning! Uninstall is not finished chet and may produce some undesired actions"
-echo "Please. Don't run this script unless you're sure."
-
 # Here we go.. ask for the administrator password upfront and run a
 # keep-alive to update existing `sudo` time stamp until script has finished
 sudo -v
@@ -14,9 +11,20 @@ export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 EXTRA_DIR="$HOME/.extra"
 
-#################################################
+echo "Warning! Uninstall is not finished chet and may produce some undesired actions"
+echo "Please. Don't run this script unless you're sure."
+
+read -p "Are you sure? (yes/no)" -n 1 -r
+echo    # (optional) move to a new line
+
+if [[ $REPLY =~ ^[Nn]$ ]]
+then
+  exit 0
+fi
+
+####################################################
 ### Remove Symbolic links to configuration files ###
-#################################################
+####################################################
 
 unmount_symbolic_links () {
   unlink ~/.bash_profile
@@ -27,4 +35,8 @@ unmount_symbolic_links () {
   unlink ~/.atom
 }
 
+unmount_symbolic_links # call function
+
 # TODO: Uninstall all the programs inside "install/" folder.
+
+exit 1
