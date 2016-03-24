@@ -67,6 +67,7 @@ applications=(
     licecap # record screen and make gif
     screenflow # Screen Recording
     licecap # animation screen
+    pocketcast # podcasts
 
     ### OTHERS ###
     mactracker
@@ -90,12 +91,13 @@ brew cask install "${applications[@]}"
 ########################################################
 
 applications_to_open=(
-    flux
-    dropbox
-    "google drive"
-    spotify
-    imageoptim
-    licecap
+    flux # Setup day to wake up
+    dropbox # Start Syncing files
+    "Google chrome" # Setup google account
+    "google drive" # Start Syncing files
+    spotify # Connect account
+    #imageoptim
+    #licecap
 )
 
 for i in "${applications_to_open[@]}"
@@ -103,7 +105,6 @@ do
     echo "=> Opening:" $i
     open -a "$i"
 done
-
 
 echo ""
 echo "INSTALLED MAC Applications..."
