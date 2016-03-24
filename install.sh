@@ -58,6 +58,7 @@ mount_symbolic_links
 ###@##################
 
 . "$DOTFILES_DIR/setup/my_documents.sh"
+. "$DOTFILES_DIR/setup/backup_gdrive.sh" # backup google drive folders into dropbox
 
 ##############################
 ### Configure GIST account ###
