@@ -1,11 +1,6 @@
 # Sources: https://github.com/webpro/dotfiles/blob/c55045c692088105dce3545637d8ab80f120908f/osx/defaults.sh
 # Source2: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-# Here we go.. ask for the administrator password upfront and run a
-# keep-alive to update existing `sudo` time stamp until script has finished
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 #######################
 ### SYSTEM ###
 ######################
