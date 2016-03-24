@@ -98,16 +98,16 @@ According to <a href="http://drewbarontini.com/setup/dotfiles/" target="_blank">
 
 I started this repo as a personal project, but If you have some ideas, I'll be happy to open this repository to contributions. You can use most of the scripts and file's structure to your own Dotfiles.
 
-Suggesting new features can be done by [opening a new Issue](./issues) explaining the functionality.
+Suggesting new features can be done by [opening a new Issue](https://github.com/ferreiro/dotfiles/issues/) explaining the functionality.
 
-To include your modifications and improvements on the current project, [propose a pull request](./pulls).
+To include your modifications and improvements on the current project, [propose a pull request](https://github.com/ferreiro/dotfiles/pulls/).
  
 
 # <a name="newbie"></a> New to Dotfiles? Don't be panic!
 
 I know that feeling. You are starting to see all that strange bash scripts and folders and you don't know what's going on. Don't be panic, all of us had felt something like that at certain point ;). I recommend you start by reading these articles (they helped me a lot):
 
-- <a href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789#.cpj2cfs2r" target="_blank">Getting Started With Dotfiles</a> is an awesome Medium Post that I strongly recommend you to understand how Dotfiles are structured and how do they work. I followed this post to create this repository.
+- <a href="https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789" target="_blank">Getting Started With Dotfiles</a> is an awesome Medium Post that I strongly recommend you to understand how Dotfiles are structured and how do they work. I followed this post to create this repository.
 - <a href="https://dotfiles.github.io" target="_blank">Unofficial Guide to Dotfiles on Github.</a> Great online guide to with a bunch of useful links to get started.
 - <a href="https://github.com/Ferreiros-lab/popular-dotfiles.git" target="_blank">Popular repositories by Jorge</a>. List of useful Dotfiles Github repositories I created to try them out and get Ideas from.
 
