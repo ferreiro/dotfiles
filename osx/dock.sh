@@ -6,7 +6,6 @@ dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Wunderlist.app"
 dockutil --no-restart --add "/Applications/Calendar.app"
 dockutil --no-restart --add "/Applications/Airmail 2.app"
-dockutil --no-restart --add "$HOME/Applications/AirMail Beta.app"
 dockutil --no-restart --add "$HOME/Applications/Google Chrome.app"
 dockutil --no-restart --add "$HOME/Applications/FirefoxDeveloperEdition.app"
 dockutil --no-restart --add "$HOME/Applications/Atom.app"
