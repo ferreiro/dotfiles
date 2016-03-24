@@ -79,6 +79,8 @@ applications=(
     android-file-transfer
     cheatsheet
     virtualbox #  virtualization software
+    duet # Ipad to screen
+    bitbar
     #clamxav # antivirus
     #easyfind # finder with steroids
 
@@ -96,6 +98,8 @@ applications_to_open=(
     "Google chrome" # Setup google account
     "google drive" # Start Syncing files
     spotify # Connect account
+    little-snitch
+    duet
     #imageoptim
     #licecap
 )
