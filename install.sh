@@ -22,13 +22,19 @@ EXTRA_DIR="$HOME/.extra"
 #################################################
 ### Add Symbolic links to configuration files ###
 #################################################
+# Great explanation of symbolic links: https://gigaom.com/2011/04/27/how-to-create-and-use-symlinks-on-a-mac/
 
-ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
-ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
-ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
-ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
-ln -sfv "$DOTFILES_DIR/config/.atom" ~
-ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
+mount_symbolic_links () {
+  ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
+  ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
+  ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
+  ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
+  ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
+  rm -rf  "$HOME/.atom" # Remove atom configuration folder before loading the new ones
+  ln -sfv "$DOTFILES_DIR/config/.atom" ~
+}
+
+mount_symbolic_links
 
 #####################################
 ### Install Programs and binaries ###
@@ -52,3 +58,5 @@ ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 ##############################
 
 . "$DOTFILES_DIR/install/gist.sh"
+
+exit 1
