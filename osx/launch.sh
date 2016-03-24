@@ -1,5 +1,12 @@
 ### This script launch all the files inside osx.
 
+COMPUTER_NAME="George"
+
+# Here we go.. ask for the administrator password upfront and run a
+# keep-alive to update existing `sudo` time stamp until script has finished
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 echo
 echo "********************"
 echo "*** Mac Defaults ***"
@@ -8,12 +15,15 @@ echo
 echo "SETTING MAC Defaults..."
 echo
 
+###############################################################################
+# General UI/UX                                                               #
+###############################################################################
 
-# Here we go.. ask for the administrator password upfront and run a
-# keep-alive to update existing `sudo` time stamp until script has finished
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
+# Set computer name (as done via System Preferences → Sharing)
+sudo scutil --set ComputerName "$COMPUTER_NAME"
+sudo scutil --set HostName "$COMPUTER_NAME"
+sudo scutil --set LocalHostName "$COMPUTER_NAME"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$COMPUTER_NAME"
 
 ############################
 ### Setting mac defaults ###
