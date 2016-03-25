@@ -84,6 +84,9 @@ applications=(
     duet # Ipad to screen
     bitbar
     gpgtools # GPG Keychain and more GPG stuff
+    sqlitestudio # See SQL squemas
+    kindle
+    send-to-kindle
     #clamxav # antivirus
     #easyfind # finder with steroids
 
