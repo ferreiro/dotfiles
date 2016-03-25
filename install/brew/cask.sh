@@ -83,6 +83,7 @@ applications=(
     virtualbox #  virtualization software
     duet # Ipad to screen
     bitbar
+    gpgtools # GPG Keychain and more GPG stuff
     #clamxav # antivirus
     #easyfind # finder with steroids
 
