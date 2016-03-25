@@ -58,6 +58,7 @@ mount_symbolic_links
 . "$DOTFILES_DIR/install/app_store/install.sh"
 . "$DOTFILES_DIR/install/atom.sh"
 . "$DOTFILES_DIR/install/bash.sh"
+. "$DOTFILES_DIR/install/npm.sh"
 
 #####################################
 ### SETING OSX: DEFAULTS AND DOCK ###
