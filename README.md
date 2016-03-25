@@ -15,8 +15,8 @@
 - [Special thanks](#thanks)
 - [Contact](#contact)
 
-
-#<a name="welcome"></a>Welcome to Dotfiles!
+#<a name="welcome"></a>Welcome to JF~Dotfiles!
+<img src="./assets/mac.png" />
 
 Hi! Welcome to my dotfiles repository. I spent the last two days and half crafting and learning how to make my own dotfiles. I'm really proud of the result and can't wait to improve them and make more cool features in the following months. If you have some ideas, I'll be happy to open this repository to contributions (read ['how to make suggestions'](#contribute) below).
 
@@ -33,13 +33,13 @@ According to <a href="http://drewbarontini.com/setup/dotfiles/" target="_blank">
 
 #<a name="install"></a>Installation Guide
 
-<img src="./assets/mac.png" /> <img src="./assets/capitan.png" />
-
-<img src="./assets/installation.gif" />
-
-**Note:** Tested on Imac 2011 and Mac Book Pro Retina 2015.
+<img src="./assets/capitan.png" />
+ 
+**Note:** Tested on OS X El Capitan 10.11.4I in Imac (2011) and Mac Book Pro Retina (2015). 
 
 ### Installing Dotfiles locally
+
+<img src="./assets/installation.gif" />
 
 1. Open a Terminal. **⌘ + space** and type "**Terminal**" and enter.
 
