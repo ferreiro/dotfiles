@@ -5,9 +5,9 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-##############################################
-#### Install Homebrew and extra utilities ####
-##############################################
+###############################################
+#### Install Homebrew and git at beginning ####
+###############################################
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -17,16 +17,17 @@ brew upgrade
 
 brew install git # Install GIT in order to "update" the repository below
 
-###################################################
-### Update repository and get current directory ###
-###################################################
+#################################################################################
+### put current directory into  a variable (so run this script from anywhere) ###
+#################################################################################
 
-# Get current directory into a variable (so run this script from anywhere)
 export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 EXTRA_DIR="$HOME/.extra"
 
-#  Update dotfiles itself first
+#####################################################
+### Update dotfiles itself first using git remote ###
+#####################################################
 
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
