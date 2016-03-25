@@ -104,7 +104,7 @@ applications_to_open=(
     "Google chrome" # Setup google account
     "google drive" # Start Syncing files
     spotify # Connect account
-    little-snitch
+    "little-snitch"
     duet
     #imageoptim
     #licecap
