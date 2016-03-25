@@ -27,7 +27,7 @@ folders=(
   # Git-repos/Gitlab
   # Git-repos/BitBucket
 
-  #Gitlab
+  Gitlab
   Github
   BitBucket
   Office-Work
