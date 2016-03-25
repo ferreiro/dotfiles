@@ -1,9 +1,9 @@
 ### BACKUP selected google drive folders into DROPBOX account ###
 
 google_drive_folders_to_backup=(
-  Gitlab
-  Github
-  BitBucket
+  # Gitlab
+  # Github
+  # BitBucket
 )
 
 for FOLDER in "${google_drive_folders_to_backup[@]}"
