@@ -33,13 +33,12 @@ According to <a href="http://drewbarontini.com/setup/dotfiles/" target="_blank">
 
 #<a name="install"></a>Installation Guide
 
-<img src="./assets/capitan.png" />
- 
 **Note:** Tested on OS X El Capitan 10.11.4I in Imac (2011) and Mac Book Pro Retina (2015). 
 
 ### Installing Dotfiles locally
 
 <img src="./assets/installation.gif" />
+<img src="./assets/capitan.png" />
 
 1. Open a Terminal. **⌘ + space** and type "**Terminal**" and enter.
 
