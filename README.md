@@ -6,7 +6,9 @@
 
 ### Repository index
 - [Welcome to Dotfiles!](#welcome)
-- [How to: Installation Guide](#install)
+- [Installation Guide](#install)
+ 	- [Dotfiles on your local computer](#install)
+ 	- [From Google drive (or other cloud service)](#install_cloud)
 - [How to: Uninstall Dotfiles](#install)
 - [Contribute to this repository](#contribute)
 - [New to Dotfiles? Don't be panic!](#newbie)
@@ -37,8 +39,7 @@ According to <a href="http://drewbarontini.com/setup/dotfiles/" target="_blank">
 
 **Note:** Tested on Imac 2011 and Mac Book Pro Retina 2015.
 
-### Installing Dotfiles
-
+### Installing Dotfiles locally
 
 1. Open a Terminal. **⌘ + space** and type "**Terminal**" and enter.
 
@@ -57,13 +58,43 @@ According to <a href="http://drewbarontini.com/setup/dotfiles/" target="_blank">
 
 4. 	Run the main script.<br />
 	*During the process it will ask you at least 2 times your password.*
-
+	
 	```Bash
 	$ ./install.sh
 	```
 
+5. Enter your password to execute the script as Super User (sudo)<br />
+	*Note: Sometimes you may need to type password  again later*
+
+	```Bash
+	$ password: <yourUserPassword>
+	```
 	
-5. You will be promted to enter your password to execute the script as Super User (sudo)<br />
+###<a name="install_cloud"></a> Installing Dotfiles from Google Drive
+
+> I recommend you to store your dotfiles on Google Drive (Dropbox, etc...) instead of your local mac.
+
+1. Install Google Drive program for mac.
+
+	```bash
+	https://www.google.com/drive/download/
+	```
+	
+2. Sign in with your account and sync all your files (including your dotfiles folder).
+3. If you don't have any previous dotfiles project on your Google Drive, clone this repository on your preferred folder **inside** your Google Drive.
+
+	```bash
+	$ cd /Users/<your_username>/Google drive/ # Go to your google drive local folder
+	$ git clone https://www.github.com/ferreiro/dotfiles.git
+	```
+
+4. From the terminal, run the ./install.sh script located in the Google Drive dotfiles folder.
+
+	```bash
+	$ cd /Users/<your_username>/Google drive/dotfiles
+	$ ./install.sh
+	```
+5. Enter your password to execute the script as Super User (sudo)<br />
 	*Note: Sometimes you may need to type password  again later*
 
 	```Bash
