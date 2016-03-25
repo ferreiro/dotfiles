@@ -8,4 +8,5 @@ echo
 
 npm install -g express-generator
 npm install -g bower
-npm install azure-cli -g
+npm install -g azure-cli
+npm install -g gulp
