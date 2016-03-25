@@ -37,7 +37,6 @@ binaries=(
     git-lfs
     cmake
     dockutil # Add/remove dock icons
-    bash-completion
     bash-completion2
     diff-so-fancy # used on .gitconfig [pager]
     wget
