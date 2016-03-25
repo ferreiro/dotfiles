@@ -50,7 +50,6 @@ applications=(
     ### DEVELOPMENT ###
     dash
     sourcetree # Git IDE
-    dockertoolbox # https://www.docker.com/products/docker-toolbox
     zeplin
     mongohub
 
