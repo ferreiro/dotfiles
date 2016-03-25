@@ -20,16 +20,37 @@ fi
 read -p 'Press [Enter] when you have set up Google Drive...'
 # TODO: Add to check if google drive has been set up
 
-echo "Creating the folders for my documents"
+#########################################
+### Creating git folders on Documents ###
+#########################################
 
-folders=(
-  # Git-repos/Github
-  # Git-repos/Gitlab
-  # Git-repos/BitBucket
+echo
+echo "=> Creating Folders to contain git repositories"
+echo "These folders will not have been linked to Google Drive"
+echo
 
+git_folders=(
   Gitlab
   Github
   BitBucket
+)
+
+for FOLDER in "${git_folders[@]}"
+do
+  mkdir -p "$HOME/Documents/$FOLDER" # -p => creates parent directory if not exists
+done
+
+############################################################
+### Create symbolic links from Google Drive to Documents ###
+############################################################
+
+echo
+echo "=> Now link some folders from Google Drive"
+echo "to have them synchronised in all your devices"
+echo
+
+folders=(
+  dotfiles # get them synchronised
   Office-Work
   # Office-Work/Internships
   # Office-Work/Projects
