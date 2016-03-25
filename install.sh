@@ -5,12 +5,23 @@
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+##############################################
+#### Install Homebrew and extra utilities ####
+##############################################
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew update # Make sure we’re using the latest Homebrew.
+brew upgrade --all # Upgrade any already-installed formulae.
+brew upgrade
+
+brew install git # Install GIT in order to "update" the repository below
+
 ###################################################
 ### Update repository and get current directory ###
 ###################################################
 
 # Get current directory into a variable (so run this script from anywhere)
-
 export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 EXTRA_DIR="$HOME/.extra"
@@ -40,7 +51,7 @@ mount_symbolic_links
 ### Install Programs and binaries ###
 #####################################
 
-. "$DOTFILES_DIR/install/brew/brew.sh" # This must be go first here
+. "$DOTFILES_DIR/install/brew/formulas.sh" # This must be go first here
 . "$DOTFILES_DIR/install/brew/cask.sh"
 . "$DOTFILES_DIR/install/brew/cask-fonts.sh"
 . "$DOTFILES_DIR/install/app_store/install.sh"

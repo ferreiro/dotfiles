@@ -1,20 +1,11 @@
 #!/usr/bin/env bash
 
-##############################################
-#### Install Homebrew and extra utilities ####
-##############################################
-
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
 brew tap homebrew/dupes
 brew tap Goles/battery
-brew update # Make sure we’re using the latest Homebrew.
-brew upgrade --all # Upgrade any already-installed formulae.
-brew upgrade
 
 brew install coreutils # Install GNU core utilities (those that come with OS X are outdated).
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-
+# sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install moreutils # Install some other useful utilities like `sponge`.
 brew install findutils # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install gnu-sed --with-default-names # Install GNU `sed`, overwriting the built-in `sed`.
