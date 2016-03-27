@@ -56,7 +56,7 @@ According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 
 	```bash
 	$ cd /Users/<your_username>/Documents/dotfiles
-	$ chmod +x ./dotfiles.sh && ./dotfiles.sh
+	$ chmod +x dotfiles.sh && ./dotfiles.sh
 	```
 
 4. Menu will be displayed. Type 1, to run the installer.
@@ -69,7 +69,7 @@ According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 	$ Number to execute: 1
 	```
 
-5. In the installer, enter your password to execute the script as Super User (sudo) and follow the instructions.<br />
+5. Enter your password to execute the script as Super User (sudo) and follow the instructions.<br />
 	*Note: Sometimes you may need to enter your password again later*
 
 	```Bash
@@ -80,7 +80,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 
 - Iterm2 ([How to configure using your Dotfiles](config/iterm2_profile/README.md))
 
-###<a name="install_cloud"/> Installing Dotfiles using Google Drive
+###<a name="install_cloud"/>![](assets/gdrive.jpg) Installing Dotfiles using Google Drive
 
 > I recommend you to store your dotfiles on Google Drive (Dropbox, etc...) instead of your local mac.
 
@@ -98,16 +98,14 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	$ git clone https://www.github.com/ferreiro/dotfiles.git
 	```
 
-4. Dotfiles are locally downloaded using Google Chrome! Now let's launch the program.
-
-5. Run `./dotfiles.sh` located on your dotfiles folder.
+4. Dotfiles are locally downloaded using Google Chrome! Now run the `./dotfiles.sh` program (located on your dotfiles folder)
 
 	```bash
 	$ cd /Users/<your_username>/Google drive/dotfiles
-	$ chmod +x ./dotfiles.sh && ./dotfiles.sh
+	$ chmod +x dotfiles.sh && ./dotfiles.sh
 	```
 
-6. Menu will be displayed. Type 1, to run the installer.
+5. Menu will be displayed. Type 1, to run the installer.
 	```Bash
 	1) Install
 	2) Uninstall
@@ -117,7 +115,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	$ Number to execute: 1
 	```
 
-7. In the installer, enter your password to execute the script as Super User (sudo) and follow the instructions.<br />
+6. Enter your password to execute the script as Super User (sudo) and follow the instructions.<br />
 	*Note: Sometimes you may need to enter your password again later*
 
 	```Bash
@@ -136,20 +134,21 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	```
 
 2. Menu will be displayed. Type 2, to run the uninstaller.
-```Bash
-1) Install
-2) Uninstall
-3) Update
-4) Quit
 
-$ Number to execute: 2
-```
+	```Bash
+	1) Install
+	2) Uninstall
+	3) Update
+	4) Quit
+
+	$ Number to execute: 2
+	```
 
 3. In the uninstaller, enter your password to execute the script as Super User (sudo).
 
-```Bash
-% Password: <your_computer_password>
-```
+	```Bash
+	% Password: <your_computer_password>
+	```
 
 ********
 
@@ -162,7 +161,7 @@ I started this repo as a personal project. But If you have some ideas I'll be ha
 - Have you made improvements on the code and want to appear on the project? [Propose a pull request](https://github.com/ferreiro/dotfiles/pulls/).
 
 
-#<a name="newbie" /> New to Dotfiles? Don't be panic!
+#<a name="newbie"/> New to Dotfiles? Don't be panic!
 
 I know that feeling. You are starting to see all that strange bash scripts and you don't know what's going on. Don't be panic, all of us had felt something like this at certain point ;). I recommend you start by reading these articles (they helped me a lot):
 
