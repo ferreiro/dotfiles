@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/usr/bin/env bash
 
 # Get dotfiles directory to (so run this script from anywhere)
 export DOTFILES_DIR

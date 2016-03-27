@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Source: https://github.com/webpro/dotfiles/blob/c55045c692088105dce3545637d8ab80f120908f/osx/dock.sh
 # More info: https://jamfnation.jamfsoftware.com/discussion.html?id=16773
 

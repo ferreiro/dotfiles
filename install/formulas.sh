@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 echo
 echo "**************************"
@@ -55,6 +55,8 @@ formulas=(
     findutils # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 
 )
+
+brew link --force openssl
 
 brew install "${formulas[@]}"
 brew cleanup # Remove outdated versions from the cellar.

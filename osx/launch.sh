@@ -1,3 +1,4 @@
+#!/bin/bash
 ### This script launch all the files inside osx.
 
 COMPUTER_NAME="George"

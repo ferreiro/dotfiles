@@ -1,10 +1,9 @@
 #!/bin/bash
-#!/usr/bin/env bash
 
 cat $DOTFILES_DIR/assets/welcome.txt
 cat $DOTFILES_DIR/assets/menu.txt
 
-PS3='Which number you want to execute?: '
+PS3='Number to execute: '
 options=("Install" "Uninstall" "Update" "Quit")
 select opt in "${options[@]}"
 do

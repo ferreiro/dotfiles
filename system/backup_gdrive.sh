@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # ### BACKUP selected google drive folders into DROPBOX account ###
 #
 # google_drive_folders_to_backup=(
