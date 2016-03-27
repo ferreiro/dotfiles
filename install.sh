@@ -1,82 +1,112 @@
+#!/bin/bash
 #!/usr/bin/env bash
 
-# Here we go.. ask for the administrator password upfront and run a
-# keep-alive to update existing `sudo` time stamp until script has finished
-sudo -v
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+echo
+echo "Welcome to JFDotfiles!"
 
-###############################################
-#### Install Homebrew and git at beginning ####
-###############################################
-
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew update # Make sure we’re using the latest Homebrew.
-brew upgrade --all # Upgrade any already-installed formulae.
-brew upgrade
-
-brew install git # Install GIT in order to "update" the repository below
-
-#################################################################################
-### put current directory into  a variable (so run this script from anywhere) ###
-#################################################################################
+# Get dotfiles directory to (so run this script from anywhere)
 
 export DOTFILES_DIR EXTRA_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 EXTRA_DIR="$HOME/.extra"
 
-#####################################################
-### Update dotfiles itself first using git remote ###
-#####################################################
+# Update the user's cached credentials, authenticating the user if necessary.
+# keep-alive to update existing `sudo` time stamp until script has finished.
 
-[ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
+echo "First, introduce your computer password to execute all the dotfiles as super user"
+echo "Note: You can be asked more times for password during process"
+echo "--"
+
+sudo -v
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+###################################################
+### Install programs needed to execute dotfiles ###
+###################################################
+
+install_setup() {
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew install git
+}
+
+update_homebrew() {
+  brew update # Make sure we’re using the latest Homebrew.
+  brew upgrade --all # Upgrade any already-installed formulae.
+  brew upgrade
+}
+
+update_dotiles() {
+  [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
+}
+
+echo "=> Install Homebrew, Git and tools we need for running dotfiles."
+install_setup
+
+echo "=> Update Homebrew formulas"
+update_homebrew
+
+echo "=> Update Dotfiles repository itself."
+#update_dotiles
 
 #################################################
 ### Add Symbolic links to configuration files ###
 #################################################
-# Great explanation of symbolic links: https://gigaom.com/2011/04/27/how-to-create-and-use-symlinks-on-a-mac/
+# Symbolic links explained here: https://goo.gl/phYxzR
 
-mount_symbolic_links () {
-  ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
-  ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
-  ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
-  ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
-  ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
+add_config_symbolic_links () {
   rm -rf  "$HOME/.atom" # Remove atom configuration folder before loading the new ones
   ln -sfv "$DOTFILES_DIR/config/.atom" ~
+  ln -sfv "$DOTFILES_DIR/config/.gemrc" ~
+  ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
+  ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
+  ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
+  ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 }
 
-mount_symbolic_links
+echo
+read -p "=> Do you want to add symbolic links? [y/n]"
+if [ "$REPLY" == "y" ]; then
+   add_config_symbolic_links
+fi
 
 #####################################
 ### Install Programs and binaries ###
 #####################################
 
-. "$DOTFILES_DIR/install/brew/formulas.sh" # This must be go first here
-. "$DOTFILES_DIR/install/brew/cask.sh"
-. "$DOTFILES_DIR/install/brew/cask-fonts.sh"
-. "$DOTFILES_DIR/install/app_store/install.sh"
-. "$DOTFILES_DIR/install/atom.sh"
-. "$DOTFILES_DIR/install/bash.sh"
-. "$DOTFILES_DIR/install/npm.sh"
+installation_files=(
+  osx/launch.sh
+  install/formulas.sh
+  install/applications.sh
+  install/atom.sh
+  install/bash.sh
+  install/fonts.sh
+  install/gist.sh
+  install/npm.sh
+)
 
-#####################################
-### SETING OSX: DEFAULTS AND DOCK ###
-####################################
+echo
+read -p "=> Do you want to install all your scripts inside $DOTFILES_DIR/install?"
+if [ "$REPLY" == "y" ]; then
 
-. "$DOTFILES_DIR/osx/launch.sh"
+  for install_directory in "${installation_files[@]}"
+  do
+      echo "=> Installing all scripts from directory:" $install_directory
+      . $DOTFILES_DIR/$install_directory # Execute script
+  done
 
-###@##################
+fi
+
+
+######################
 ### SET UP FOLDERS ###
-###@##################
+#####################
 
-. "$DOTFILES_DIR/setup/my_documents.sh"
-. "$DOTFILES_DIR/setup/backup_gdrive.sh" # backup google drive folders into dropbox
 
-##############################
-### Configure GIST account ###
-##############################
-
-. "$DOTFILES_DIR/install/gist.sh"
+echo
+read -p "=> Do you want to create symbolic links to Google Drive? [y/n]"
+if [ "$REPLY" == "y" ]; then
+  . "$DOTFILES_DIR/system/documents.sh"
+  . "$DOTFILES_DIR/system/backup_gdrive.sh" # backup google drive folders into dropbox
+fi
 
 exit 1
