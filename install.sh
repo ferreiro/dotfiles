@@ -1,24 +1,23 @@
 #!/bin/bash
 #!/usr/bin/env bash
 
-echo
-echo "Welcome to JFDotfiles!"
-
 # Get dotfiles directory to (so run this script from anywhere)
-
-export DOTFILES_DIR EXTRA_DIR
+export DOTFILES_DIR
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-EXTRA_DIR="$HOME/.extra"
 
 # Update the user's cached credentials, authenticating the user if necessary.
 # keep-alive to update existing `sudo` time stamp until script has finished.
 
-echo "First, introduce your computer password to execute all the dotfiles as super user"
+clear
+
+echo "Welcome to the installer!"
+echo "First, introduce your password to execute all the dotfiles as super user"
 echo "Note: You can be asked more times for password during process"
-echo "--"
+echo
 
 sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+clear # clear the screen
 
 ###################################################
 ### Install programs needed to execute dotfiles ###
@@ -48,6 +47,8 @@ update_homebrew
 echo "=> Update Dotfiles repository itself."
 #update_dotiles
 
+clear # clear the screen
+
 #################################################
 ### Add Symbolic links to configuration files ###
 #################################################
@@ -63,50 +64,55 @@ add_config_symbolic_links () {
   ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
 }
 
-echo
-read -p "=> Do you want to add symbolic links? [y/n]"
+read -p "=> Do you want to add symbolic links? [y/n]: "
 if [ "$REPLY" == "y" ]; then
-   add_config_symbolic_links
+  clear # clear the screen
+  add_config_symbolic_links
 fi
 
 #####################################
 ### Install Programs and binaries ###
 #####################################
 
-installation_files=(
-  osx/launch.sh
-  install/formulas.sh
-  install/applications.sh
-  install/atom.sh
-  install/bash.sh
-  install/fonts.sh
-  install/gist.sh
-  install/npm.sh
-)
-
-echo
-read -p "=> Do you want to install all your scripts inside $DOTFILES_DIR/install?"
+read -p "=> Do you want to install all your scripts inside $DOTFILES_DIR/install? [y/n]: "
 if [ "$REPLY" == "y" ]; then
 
-  for install_directory in "${installation_files[@]}"
-  do
-      echo "=> Installing all scripts from directory:" $install_directory
-      . $DOTFILES_DIR/$install_directory # Execute script
+  # installation_files=(
+  #   osx/launch.sh
+  #   install/formulas.sh
+  #   install/applications.sh
+  #   install/atom.sh
+  #   install/bash.sh
+  #   install/fonts.sh
+  #   install/gist.sh
+  #   install/npm.sh
+  # )
+
+  clear # clear the screen
+
+  for INSTALLFILE in "$DOTFILES_DIR"/install/*.sh; do
+      [ -f "$INSTALLFILE" ] && . "$INSTALLFILE"
   done
 
-fi
+  # for install_directory in "${installation_files[@]}"
+  # do
+  #     echo "=> Installing all scripts from directory:" $install_directory
+  #     . $DOTFILES_DIR/$install_directory # Execute script
+  # done
 
+fi
 
 ######################
 ### SET UP FOLDERS ###
 #####################
 
-
 echo
-read -p "=> Do you want to create symbolic links to Google Drive? [y/n]"
+read -p "=> Do you want to create symbolic links to Google Drive? [y/n]: "
 if [ "$REPLY" == "y" ]; then
+  clear # clear the screen
   . "$DOTFILES_DIR/system/documents.sh"
   . "$DOTFILES_DIR/system/backup_gdrive.sh" # backup google drive folders into dropbox
 fi
 
+cat $DOTFILES_DIR/assets/congratulations.txt
 exit 1

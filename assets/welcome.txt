@@ -1,0 +1,20 @@
+
+MMMMMMMMMMMMMNmmmNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMms/.       ./smMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMy-               -yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMm-                   -mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMm`       .:. -:::::-   `mMMMMhssshNMMmyosdMyssssdysssdmsNhyMMMmssssMmyssmMMM
+MMM-        oM/ dMo+++-    -MMMM-.dh/`ho`smy`/hy /hm-.hhms d/ MMMy shhN`-hhNMMM
+MMm   -. `. oM/ dM-..`      mMMM-.MMd o..MMM-`MN +MM-`//ds d/ MMMy :+oMd+-.yMMM
+MMd  +o+sy/ oM/ dMyyys      mMMM-`o+./Nh.:o/.yMN +MM--MMMs d/ ++os /++m+o+`sMMM
+MMM.      `.dM- dM`        .MMMMNmmNMMMMMNmNMMMMNNMMNNMMMNNMNmmNNNNNNNMNmmMMMMM
+MMMd`    -yyo-  oy`       `dMMMMmNddhhdddyMhdmNMMohhhshhsysmy+hsysdyysyysyhhMMM
+MMMMd.                   .dMMMMMmNmddNmmmdMdmyMMmydhhhdo/hhNdNNymhmdhhdhdhhdMMM
+MMMMMNs.               .sMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMh+-`       `-+hMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMmdhhhdmMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+
+Welcome to JF~Dotfiles!
+
+Credits: Jorge ferreiro <https://github.com/ferreiro>
+Online documentation and support: https://github.com/ferreiro/dotfiles
