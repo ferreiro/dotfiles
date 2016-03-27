@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="./assets/logo_round_v1_large.png" width="550px" />
+	<img src="api/assets/logo_round_v1_large.png" width="550px" />
 </p>
 
 <br />
@@ -16,7 +16,7 @@
 - [Contact](#contact)
 
 #<a name="welcome"></a>Welcome to JF~Dotfiles!
-<img src="./assets/mac.png" />
+<img src="api/assets/mac.png" />
 
 Hi! Welcome to JF~Dotfiles repository. I spent the last two days and half crafting and learning how to make my own Dotfiles. I'm really proud of the result and can't wait to improve them and make more cool features in the following months. If you have some ideas, I'll be happy to open this repository to contributions (read ['how to make suggestions'](#contribute) below).
 
@@ -35,10 +35,10 @@ According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 
 **Note:** Tested on OS X El Capitan 10.11.4 using iMac (Mid 2011) and Mac Book Pro Retina (Early 2015).
 
-###![](assets/folder.png) Installing Dotfiles locally
+###![](api/assets/folder.png) Installing Dotfiles locally
 
-<img src="./assets/installation.gif" />
-<img src="./assets/capitan.png" />
+<img src="api/assets/installation.gif" />
+<img src="api/assets/capitan.png" />
 
 1. Open the **Terminal** app.
 	- Option 1. Go to /Applications/Utilities and click on Terminal icon.
@@ -80,7 +80,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 
 - Iterm2 ([How to configure using your Dotfiles](config/iterm2_profile/README.md))
 
-###<a name="install_cloud"/>![](assets/gdrive.jpg) Installing Dotfiles using Google Drive
+###<a name="install_cloud"/>![](api/assets/gdrive.jpg) Installing Dotfiles using Google Drive
 
 > I recommend you to store your dotfiles on Google Drive (Dropbox, etc...) instead of your local mac.
 
@@ -122,7 +122,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	% Password: <your_computer_password>
 	```
 
-###<a name="uninstall"/>![](assets/uninstall.png) Uninstalling Dotfiles
+###<a name="uninstall"/>![](api/assets/uninstall.png) Uninstalling Dotfiles
 
 > **Warning:** I am currently working on this feature and is not 100% finished. So only execute it if you have some experience with Dotfiles and understand the code.
 
@@ -168,6 +168,7 @@ I know that feeling. You are starting to see all that strange bash scripts and y
 - [Getting Started With Dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789) is an awesome Medium Post that I strongly recommend you to understand how Dotfiles are structured and how do they work. I followed this post to create this repository.
 - [Unofficial Guide to Dotfiles on Github](https://dotfiles.github.io) is a great online guide with a bunch of useful links and tips to get started or make your Dotfiles even better.
 - [Popular repositories by JF](https://github.com/Ferreiros-lab/popular-dotfiles.git) is a list of useful Dotfiles Repositories I created to get Ideas from.
+- [Vítor’s dotfiles](https://github.com/vitorgalvao/dotfiles)  is a good example of how to modularize dotfiles.
 
 #<a name="thanks"/> Special thanks
 
@@ -175,7 +176,7 @@ I want to give special thanks to some amazing developers who shared publicly the
 
 Thanks to them I've learned to make my Dotfiles even better. I strongly recommend you to check their repositories, you'll learn a lot.
 
-**@webpro**. Webpro is the guy who made the 'Getting Starting With Dofiles' article that I recommend you to read in the [New to Dotfiles](#newbie) section. I started my Dotfiles following his structure. I [Webpro Dotfiles](https://github.com/webpro/dotfiles) they are really well organised and contains interesting scripts and features (like running only specific parts of your Dotfiles instead the whole program from terminal).
+**@webpro**. Webpro is the guy who made the 'Getting Starting With Dofiles' article that I recommend you to read in the [New to Dotfiles](#newbie) section. I started my Dotfiles following his structure. [Webpro Dotfiles](https://github.com/webpro/dotfiles) are well organised and contains cool (like running only specific parts of your Dotfiles instead the whole program from terminal).
 
 **@mathiasbynens**. Mathias created one of the most awesome Mac "defaults" scripts out there. His [dotfiles repository](https://github.com/mathiasbynens/dotfiles) contains also useful scripts. Check them out!
 
