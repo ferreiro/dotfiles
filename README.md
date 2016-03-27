@@ -35,7 +35,7 @@ According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 
 **Note:** Tested on OS X El Capitan 10.11.4 using iMac (Mid 2011) and Mac Book Pro Retina (Early 2015).
 
-### Installing Dotfiles locally
+###![](assets/folder.png) Installing Dotfiles locally
 
 <img src="./assets/installation.gif" />
 <img src="./assets/capitan.png" />
@@ -122,7 +122,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	% Password: <your_computer_password>
 	```
 
-###<a name="uninstall"/>Uninstalling Dotfiles
+###<a name="uninstall"/>![](assets/uninstall.png) Uninstalling Dotfiles
 
 > **Warning:** I am currently working on this feature and is not 100% finished. So only execute it if you have some experience with Dotfiles and understand the code.
 
