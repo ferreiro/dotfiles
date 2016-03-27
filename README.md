@@ -169,13 +169,13 @@ I know that feeling. You are starting to see all that strange bash scripts and y
 - [Unofficial Guide to Dotfiles on Github](https://dotfiles.github.io) is a great online guide with a bunch of useful links and tips to get started or make your Dotfiles even better.
 - [Popular repositories by JF](https://github.com/Ferreiros-lab/popular-dotfiles.git) is a list of useful Dotfiles Repositories I created to get Ideas from.
 
-#<a name="thanks/>Special thanks
+#<a name="thanks"/> Special thanks
 
 I want to give special thanks to some amazing developers who shared publicly their Dotfiles, letting the community to learn from their work.
 
 Thanks to them I've learned to make my Dotfiles even better. I strongly recommend you to check their repositories, you'll learn a lot.
 
-**@webpro**. Webpro is the guy who made the 'Getting Starting With Dofiles' article that I recommend you to read in the ['New to Dotfiles'](#newbie) section. I started my Dotfiles following his structure. I [Webpro Dotfiles](https://github.com/webpro/dotfiles) they are really well organised and contains interesting scripts and features (like running only specific parts of your Dotfiles instead the whole program from terminal).
+**@webpro**. Webpro is the guy who made the 'Getting Starting With Dofiles' article that I recommend you to read in the [New to Dotfiles](#newbie) section. I started my Dotfiles following his structure. I [Webpro Dotfiles](https://github.com/webpro/dotfiles) they are really well organised and contains interesting scripts and features (like running only specific parts of your Dotfiles instead the whole program from terminal).
 
 **@mathiasbynens**. Mathias created one of the most awesome Mac "defaults" scripts out there. His [dotfiles repository](https://github.com/mathiasbynens/dotfiles) contains also useful scripts. Check them out!
 

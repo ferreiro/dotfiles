@@ -1,20 +1,22 @@
 #!/bin/bash
 
-cat $DOTFILES_DIR/assets/welcome.txt
-cat $DOTFILES_DIR/assets/menu.txt
+EXECUTABLE_DIR="api"
 
-PS3='Which number you want to execute?: '
+cat $EXECUTABLE_DIR/assets/welcome.txt
+cat $EXECUTABLE_DIR/assets/menu.txt
+
+PS3='Number to execute: '
 options=("Install" "Uninstall" "Update" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
         "Install")
             echo "Launching the installer..."
-            . install.sh
+            . $EXECUTABLE_DIR/install.sh
             ;;
         "Uninstall")
             echo "Launching the uninstaller..."
-            . uninstall.sh
+            . $EXECUTABLE_DIR/uninstall.sh
             ;;
         "Update")
             echo "Updater is not currently supported"
