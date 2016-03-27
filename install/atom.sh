@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-# Some cool references places to find packages:
-# http://www.hongkiat.com/blog/useful-atom-packages/
-# https://atom.io/packages/
-
 echo
 echo "*******************************************************"
 echo "*** Install Atom packages / modules and more stuff  ***"
 echo "*******************************************************"
 echo
+
+# Some cool references places to find packages:
+# http://www.hongkiat.com/blog/useful-atom-packages/
+# https://atom.io/packages/
+
+brew cask install atom
 
 # Setting requirements for Python Linter.
 # Credits: http://www.marinamele.com/install-and-configure-atom-editor-for-python
@@ -16,14 +18,9 @@ echo
 pip install flake8
 pip install flake8-docstrings
 
-########################################################
-#### Install Atom packages / modules and more stuff ####
-########################################################
-
 atom_packages=(
 
     ### TOOLS ###
-
     pigments # https://atom.io/packages/pigments
     open-recent # https://atom.io/packages/open-recent
     script # https://atom.io/packages/script

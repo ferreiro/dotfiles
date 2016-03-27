@@ -1,29 +1,19 @@
 #!/usr/bin/env bash
 
-###########################################
-### Brew cask programs
-###########################################
-
-echo ""
+echo
 echo "**************************"
 echo "*** Brew cask programs ***"
 echo "**************************"
-echo ""
+echo
+echo "INSTALLING MAC Applications..."
+echo
 
 # Install Caskroom
 brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
 
-echo ""
-echo "INSTALLING MAC Applications..."
-echo ""
-
-##########################################
-### Install the following applications ###
-##########################################
-
-applications=(
+applications_to_install=(
 
     ### ESSENTIALS ###
     flux
@@ -38,8 +28,8 @@ applications=(
     firefoxdeveloperedition
 
     ### CLOUD / STORAGE ###
-    google-drive
     dropbox
+    google-drive
 
     ### TEXT  EDITORS / IDES ###
     atom
@@ -88,10 +78,9 @@ applications=(
     send-to-kindle
     #clamxav # antivirus
     #easyfind # finder with steroids
-
 )
 
-brew cask install "${applications[@]}"
+brew cask install "${applications_to_install[@]}"
 
 ########################################################
 ### Launch the following applications to set them up ###
@@ -100,13 +89,10 @@ brew cask install "${applications[@]}"
 applications_to_open=(
     flux # Setup day to wake up
     dropbox # Start Syncing files
-    "Google chrome" # Setup google account
-    "google drive" # Start Syncing files
     spotify # Connect account
     "little-snitch"
-    duet
-    #imageoptim
-    #licecap
+    "Google chrome" # Setup google account
+    "google drive" # Start Syncing files
 )
 
 for i in "${applications_to_open[@]}"
@@ -114,7 +100,3 @@ do
     echo "=> Opening:" $i
     open -a "$i"
 done
-
-echo ""
-echo "INSTALLED MAC Applications..."
-echo ""

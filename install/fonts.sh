@@ -1,17 +1,12 @@
 #!/usr/bin/env bash
 
-###########################################
-### Brew cask fonts
-###########################################
-
-echo ""
+echo
 echo "***********************"
 echo "*** Brew cask fonts ***"
 echo "***********************"
-
-echo ""
+echo
 echo "INSTALLING System fonts..."
-echo ""
+echo
 
 brew tap caskroom/fonts
 
@@ -43,7 +38,3 @@ fonts=(
 )
 
 brew cask install "${fonts[@]}"
-
-echo ""
-echo "INSTALLED System fonts..."
-echo ""
