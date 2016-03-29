@@ -34,6 +34,7 @@ atom_packages=(
     file-icons # https://atom.io/packages/file-icons
     emmet # https://atom.io/packages/emmet
     todo-show # https://atom.io/packages/todo-show
+    language-jade # https://atom.io/packages/language-jade
 
     ### LINTERS ###
     # More linters here: https://atom.io/users/AtomLinter/packages

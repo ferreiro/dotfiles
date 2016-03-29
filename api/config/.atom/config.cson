@@ -22,5 +22,7 @@
   pigments:
     mergeColorDuplicates: true
   "todo-show": {}
+  "tree-view":
+    hideVcsIgnoredFiles: false
   welcome:
     showOnStartup: false
