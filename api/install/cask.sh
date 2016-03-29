@@ -76,6 +76,7 @@ applications_to_install=(
     sqlitestudio # See SQL squemas
     kindle
     send-to-kindle
+    simpless
     #clamxav # antivirus
     #easyfind # finder with steroids
 )
