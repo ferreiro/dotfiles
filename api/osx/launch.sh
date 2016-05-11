@@ -50,6 +50,8 @@ for app in "Address Book" "Calendar" "Contacts" "Dock" "Finder" "Mail" "SystemUI
     killall "${app}" &> /dev/null
 done
 
+killall SystemUIServer
+
 echo
 echo "SETTED MAC DEFAULTS..."
 echo
