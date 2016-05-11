@@ -12,6 +12,7 @@
       "pigments"
     ]
   editor:
+    fontSize: 18
     invisibles: {}
   emmet: {}
   "highlight-selected": {}
