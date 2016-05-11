@@ -6,7 +6,12 @@ echo "*** Install NPM packages / modules and more stuff  ***"
 echo "*******************************************************"
 echo
 
-npm install -g express-generator
-npm install -g bower
-npm install -g azure-cli
-npm install -g gulp
+npm_packages=(
+  express-generator
+  coffee-script
+  azure-cli
+  bower
+  gulp
+)
+
+npm install -g "${npm_packages[@]}"
