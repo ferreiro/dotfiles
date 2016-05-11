@@ -1,6 +1,8 @@
 # Sources: https://github.com/webpro/dotfiles/blob/c55045c692088105dce3545637d8ab80f120908f/osx/defaults.sh
 # Source2: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
+SCREENSHOTS_FOLDER="$HOME/Pictures/Screenshots"
+
 #######################
 ### SYSTEM ###
 ######################
@@ -136,20 +138,24 @@ sudo nvram SystemAudioVolume=" "
 # # Require password 5 seconds after sleep or screen saver begins
 # defaults write com.apple.screensaver askForPassword -int 1
 # defaults write com.apple.screensaver askForPasswordDelay -int 5
-#
-# # Save screenshots to the desktop
-# defaults write com.apple.screencapture location -string "$HOME/Desktop"
-#
-# # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-# defaults write com.apple.screencapture type -string "png"
-#
+
+# Check screenshots folder exits.
+if [ ! -d $SCREENSHOTS_FOLDER ]
+then
+  mkdir $SCREENSHOTS_FOLDER
+fi
+
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string $SCREENSHOTS_FOLDER
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
 # # Disable shadow in screenshots
 # defaults write com.apple.screencapture disable-shadow -bool true
-#
+
 # # Enable subpixel font rendering on non-Apple LCDs
 # defaults write NSGlobalDomain AppleFontSmoothing -int 2
-#
-
 
 # ###############################################################################
 # # Dashboard                                                                   #
