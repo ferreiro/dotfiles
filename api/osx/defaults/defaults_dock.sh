@@ -6,7 +6,7 @@
 defaults write com.apple.dock orientation -string "left"
 defaults write com.apple.dock pinning -string "end"
 
-defaults write com.apple.dock tilesize -int 27 # icon size
+defaults write com.apple.dock tilesize -int 35 # icon size
 defaults write com.apple.dock size-immutable -bool YES
 
 
