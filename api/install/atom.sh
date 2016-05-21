@@ -45,6 +45,16 @@ atom_packages=(
     linter-jshint # https://atom.io/packages/linter-jshint
     linter-csslint # https://atom.io/packages/linter-csslint
     atom-django # https://atom.io/packages/atom-django
+
+    ### JAVA
+    autocomplete-java
+
+    ### HASKELL
+    language-haskell
+    haskell-ghc-mod
+    ide-haskell-cabal
+    ide-haskell
+    autocomplete-haskell
 )
 
 apm install "${atom_packages[@]}"
