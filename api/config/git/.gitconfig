@@ -7,7 +7,7 @@
 
 [core]
     editor = vim
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/config/git/.gitignore
     filemode = false # set true means file mode permission changes are considered changes.
     trustctime = false
     ignorecase = true
