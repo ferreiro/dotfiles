@@ -12,7 +12,12 @@
 #
 # 'atom-text-editor':
 #   'enter': 'editor:newline'
-#
+
+'atom-workspace atom-text-editor:not([mini])':
+  # Move code line up and down
+  'cmd-alt-down': 'editor:move-line-down',
+  'cmd-alt-up': 'editor:move-line-up'
+
 # 'atom-workspace':
 #   'ctrl-shift-p': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
