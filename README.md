@@ -184,5 +184,5 @@ Thanks to them I've learned to make my Dotfiles even better. I strongly recommen
 
 If you have some doubts or want to stay in touch I'll be happy to help you out or collaborate on new projects. You can reach me here:
 
-- **Website:** <a href="http://www.jgferreiro.com" target="_blank">Jorge Ferreiro</a>
-- **Work email:** me *(AT)* jgferreiro *(DOT)* com
+- **Website:** [Jorge Ferreiro >](http://www.ferreiro.me)
+- **Contact:** [Contact form and email >](http://www.ferreiro.me/contact)
