@@ -46,6 +46,9 @@ atom_packages=(
     linter-csslint # https://atom.io/packages/linter-csslint
     atom-django # https://atom.io/packages/atom-django
 
+    ### HANDLEBARS
+    atom-handlebars
+
     ### JAVA
     autocomplete-java
 

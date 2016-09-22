@@ -7,6 +7,7 @@ echo "*******************************************************"
 echo
 
 npm_packages=(
+  mongoose
   express-generator
   coffee-script
   azure-cli
