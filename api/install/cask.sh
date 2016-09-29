@@ -15,41 +15,43 @@ brew tap caskroom/versions
 
 applications_to_install=(
 
-    ### ESSENTIALS ###
+    # Essentials
     flux
     iterm2
     cleanmymac
     the-unarchiver # zips, rar, and more
 
-    ### BROWSERS ###
+    # Browsers
     opera
     google-chrome
     google-chrome-canary
     firefoxdeveloperedition
+    
+    # Machine Learning
+    octave
 
-    ### CLOUD / STORAGE ###
+    # Cloud storage
     dropbox
     google-drive
 
-    ### TEXT  EDITORS / IDES ###
+    # Text Editors
     atom
     macdown
     sublime-text3
-    # webstorm # Javascript IDE
 
-    ### DEVELOPMENT ###
+    # Dev
     dash
-    sourcetree # Git IDE
-    # zeplin
     mongohub
+    # zeplin
+    # sourcetree # Git IDE
 
-    ### CHATS ###
+    # Messages
     skype
     slack
     telegram
     # google-hangouts
 
-    ### MULTIMEDIA ###
+    # Multimedia
     vlc
     vox
     spotify
