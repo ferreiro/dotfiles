@@ -60,34 +60,25 @@ add_config_symbolic_links () {
   ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
   ln -sfv "$DOTFILES_DIR/config/.bash_profile" ~
   ln -sfv "$DOTFILES_DIR/config/git/.gitconfig" ~
-  ln -sfv "$DOTFILES_DIR/config/git/.gitignore_global" ~
+  ln -sfv "$DOTFILES_DIR/config/git/.gitignore" ~
 }
 
 read -p "=> Do you want to add symbolic links? [y/n]: "
+
 if [ "$REPLY" == "y" ]; then
   clear # clear the screen
   add_config_symbolic_links
 fi
+
+clear # clear the screen
 
 #####################################
 ### Install Programs and binaries ###
 #####################################
 
 read -p "=> Do you want to install all your scripts inside $DOTFILES_DIR/install? [y/n]: "
+
 if [ "$REPLY" == "y" ]; then
-
-  # installation_files=(
-  #   osx/launch.sh
-  #   install/formulas.sh
-  #   install/applications.sh
-  #   install/atom.sh
-  #   install/bash.sh
-  #   install/fonts.sh
-  #   install/gist.sh
-  #   install/npm.sh
-  # )
-
-  clear # clear the screen
 
   for INSTALLFILE in "$DOTFILES_DIR"/install/*.sh; do
       [ -f "$INSTALLFILE" ] && . "$INSTALLFILE"
