@@ -37,16 +37,20 @@ update_dotiles() {
   [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 }
 
-echo "=> Install Homebrew, Git and tools we need for running dotfiles."
-install_setup
+read -p "=> Install Homebrew and update it [y/n]: "
 
-echo "=> Update Homebrew formulas"
-update_homebrew
+if [ "$REPLY" == "y" ]; then
+  echo "=> Install Homebrew, Git and tools we need for running dotfiles."
+  install_setup
 
-echo "=> Update Dotfiles repository itself."
-#update_dotiles
+  echo "=> Update Homebrew formulas"
+  update_homebrew
 
-clear # clear the screen
+  echo "=> Update Dotfiles repository itself."
+  #update_dotiles
+
+  clear # clear the screen
+fi
 
 #################################################
 ### Add Symbolic links to configuration files ###
@@ -55,6 +59,7 @@ clear # clear the screen
 
 add_config_symbolic_links () {
   rm -rf  "$HOME/.atom" # Remove atom configuration folder before loading the new ones
+  # ln -sfv "$DOTFILES_DIR/config/.zshrc" ~
   ln -sfv "$DOTFILES_DIR/config/.atom" ~
   ln -sfv "$DOTFILES_DIR/config/.gemrc" ~
   ln -sfv "$DOTFILES_DIR/config/.inputrc" ~
@@ -64,7 +69,6 @@ add_config_symbolic_links () {
 }
 
 read -p "=> Do you want to add symbolic links? [y/n]: "
-
 if [ "$REPLY" == "y" ]; then
   clear # clear the screen
   add_config_symbolic_links
