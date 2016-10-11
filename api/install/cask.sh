@@ -20,6 +20,9 @@ applications_to_install=(
     iterm2
     cleanmymac
     the-unarchiver # zips, rar, and more
+    caffeine # Mac will never sleep
+    spectacle # resize windows
+    superduper # Recoveries
 
     ### BROWSERS ###
     opera
