@@ -9,3 +9,6 @@
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
+
+# Change the bash
+chsh -s /bin/bash
