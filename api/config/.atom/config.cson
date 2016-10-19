@@ -10,13 +10,29 @@
       "language-mustache"
       "linter-csslint"
       "pigments"
+      "linter-handlebars"
+      "atom-beautify"
+      "atom-django"
+      "autocomplete-haskell"
+      "autocomplete-java"
+      "haskell-ghc-mod"
+      "highlight-selected"
+      "ide-haskell"
+      "ide-haskell-cabal"
+      "language-haskell"
+      "linter-flake8"
+      "linter-jshint"
+      "linter-ruby"
+      "markdown-pdf"
     ]
   editor:
-    fontSize: 18
+    fontSize: 19
     invisibles: {}
+    tabType: "soft"
   emmet: {}
   "highlight-selected": {}
-  linter: {}
+  linter:
+    errorPanelHeight: 151
   "merge-conflicts": {}
   minimap: {}
   "open-recent": {}
@@ -24,6 +40,6 @@
     mergeColorDuplicates: true
   "todo-show": {}
   "tree-view":
-    hideVcsIgnoredFiles: false
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
