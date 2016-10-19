@@ -1,12 +1,12 @@
 [user]
-    name = Jorge Ferreiro
-    email = me@jgferreiro.com
+    name = "Jorge Ferreiro"
+    email = jorge@ferreiro.me
 
 [github]
     user = ferreiro
 
 [core]
-    editor = vim
+    editor = "atom --wait"
     excludesfile = ~/config/git/.gitignore
     filemode = false # set true means file mode permission changes are considered changes.
     trustctime = false
@@ -17,13 +17,13 @@
     sts = status -sb
     stl = ls-files -m -o --exclude-standard
     l  = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    ll = log --pretty=oneline --graph --abbrev-commit
-    lg = log -p
+    lg = log --pretty=oneline --graph --abbrev-commit
+    ll = log -p
     # ci = commit
     # br = branch
     # co = checkout
     # cr = clone --recursive
-    # df = diff --word-diff
+    df = diff --word-diff
     # unstage = reset --hard HEAD
     # g = grep --break --heading --line-number
     # amend = commit --amend --reuse-message=HEAD
@@ -41,7 +41,6 @@
     diff = diff-so-fancy | less --tabs=4 -RFX
     show = diff-so-fancy | less --tabs=4 -RFX
 
-
 [color]
     diff = auto
     status = auto
@@ -49,60 +48,47 @@
     interactive = auto
     ui = true
 
-# [color "branch"]
-#     current = green reverse
-#     local = yellow
-#     remote = green
-# [color "diff"]
-#     meta = yellow bold
-#     frag = magenta bold
-#     old = red bold
-#     new = green bold
-# [color "status"]
-#     added = yellow
-#     changed = green
-#     untracked = cyan
-# [color "diff-highlight"]
-#     oldNormal = "red bold"
-#     oldHighlight = "red bold 52"
-#     newNormal = "green bold"
-#     newHighlight = "green bold 22"
+[color "branch"]
+    current = green reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[color "diff-highlight"]
+    oldNormal = "red bold"
+    oldHighlight = "red bold 52"
+    newNormal = "green bold"
+    newHighlight = "green bold 22"
 
-#
-# [grep]
-#     lineNumber = true
-#
-# [help]
-#     autocorrect = 1
-#
-# [difftool]
-#     prompt = false
-#
-# [mergetool]
-#     prompt = false
+[help]
+    autocorrect = 1
 
-# [push]
-#     default = simple
-#
-# [fetch]
-#   prune = true
-#
-# [diff]
-#     renames = copies
-#     tool = Kaleidoscope
-# [difftool "Kaleidoscope"]
-#     cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-# [difftool "sourcetree"]
-# 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-# 	path =
-#
-# [merge]
-#     tool = Kaleidoscope
-#     conflictstyle = diff3
-#     defaultToUpstream = true
+[merge]
+    tool = opendiff
+    # conflictstyle = diff3
+    # defaultToUpstream = true
+
 # [mergetool "Kaleidoscope"]
 #     cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 #     trustExitCode = true
 # [mergetool "sourcetree"]
 # 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 # 	trustExitCode = true
+
+# [grep]
+#     lineNumber = true
+#
+# [difftool]
+#     prompt = false
+
+# [push]
+#     default = simple
+#
+# [fetch]
