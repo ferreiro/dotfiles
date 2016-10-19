@@ -8,23 +8,31 @@
 # More info: https://jamfnation.jamfsoftware.com/discussion.html?id=16773
 
 dockutil --no-restart --remove all
+dockutil --no-restart --add '/Applications/Skype.app'
+dockutil --no-restart --add '/Applications/Slack.app'
 
-# dockutil --no-restart --add '/Applications/Wunderlist.app'
-dockutil --no-restart --add '/Applications/Calendar.app'
-dockutil --no-restart --add '/Applications/Airmail 2.app'
-dockutil --no-restart --add '/Applications/Safari.app'
-# dockutil --no-restart --add '$HOME/Applications/Google Chrome.app'
-# dockutil --no-restart --add '$HOME/Applications/FirefoxDeveloperEdition.app'
-dockutil --no-restart --add "$HOME/Applications/iTerm.app"
-dockutil --no-restart --add "$HOME/Applications/Atom.app"
+
+# Add space to System configuration
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}'
+
+dockutil --no-restart --add '/Applications/Fantastical 2.app'
+dockutil --no-restart --add '/Applications/Airmail 3.app'
+dockutil --no-restart --add '/Applications/Opera.app'
+# dockutil --no-restart --add '/Applications/Safari.app'
+# dockutil --no-restart --add '/Applications/Google Chrome.app'
+
+
+# Add space to System configuration
+defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}'
+
+dockutil --no-restart --add "/Applications/iTerm.app"
+dockutil --no-restart --add "/Applications/Atom.app"
+dockutil --no-restart --add '/Applications/Xcode.app/Contents/Applications/FileMerge.app'
 
 # Add space to System configuration
 defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type='spacer-tile';}'
 
 dockutil --no-restart --add '/Applications/System Preferences.app'
-dockutil --no-restart --add '/Applications/itunes.app'
-dockutil --no-restart --add "$HOME/Applications/Spotify.app"
-
 
 # The following adds ~/Downloads as a grid stack displayed as a folder for every user's dock on that machine:
 dockutil --add '~/Downloads' --view grid --display folder --allhomes
