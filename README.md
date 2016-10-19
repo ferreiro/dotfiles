@@ -25,6 +25,19 @@ Hi! Welcome to JF~Dotfiles repository. I spent the last two days and half crafti
 According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 "Dotfiles is a name used to denote a set of configuration files (generally hidden ones with a `.` before the filename) that are used to set up and configure various applications and settings, such as: Bash. Git. Vim. Sublime Text"
 
+### How to automatically install the Dotfiles?
+
+There are two options:
+
+- The first is cloning the repository into your computer and then execute
+`install.sh` script.
+
+- The second form is done by using `curl`. Just type the following command in the folder you want to download the dotfiles.
+
+```
+curl -s https://raw.githubusercontent.com/ferreiro/dotfiles/master/auto.sh
+```
+
 ### Goals with this repository
 
 1. Crafting a program to install easily and comfortably all my mac applications, configuration files and design preferences (Dock, Finder...).
@@ -33,11 +46,13 @@ According to [Drew Barontini](http://drewbarontini.com/setup/dotfiles/):
 
 #<a name="install"></a>Installation Guide
 
-**Note:** Tested on OS X El Capitan 10.11.4 using iMac (Mid 2011) and Mac Book Pro Retina (Early 2015).
+**Note:** Tested on OS X Sierra 10.12.0 and El Capitan 10.11.4 using iMac (Mid 2011) and Mac Book Pro Retina (Early 2015).
 
 ###![](api/assets/folder.png) Installing Dotfiles locally
 
 <img src="api/assets/installation.gif" />
+
+<img src="api/assets/sierra.png" />
 <img src="api/assets/capitan.png" />
 
 1. Open the **Terminal** app.
@@ -179,6 +194,8 @@ Thanks to them I've learned to make my Dotfiles even better. I strongly recommen
 **@webpro**. Webpro is the guy who made the 'Getting Starting With Dofiles' article that I recommend you to read in the [New to Dotfiles](#newbie) section. I started my Dotfiles following his structure. [Webpro Dotfiles](https://github.com/webpro/dotfiles) are well organised and contains cool (like running only specific parts of your Dotfiles instead the whole program from terminal).
 
 **@mathiasbynens**. Mathias created one of the most awesome Mac "defaults" scripts out there. His [dotfiles repository](https://github.com/mathiasbynens/dotfiles) contains also useful scripts. Check them out!
+
+Also I included the auto download feature using curl from this [repo](https://github.com/blorente/dotfiles).
 
 #<a name="contact"/>Contact
 
