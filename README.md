@@ -32,7 +32,11 @@ There are two options:
 - The first is cloning the repository into your computer and then execute
 `install.sh` script.
 
-- `Coming soon` One line Installation
+- One line Installation. Open your terminal and paste the following code:
+
+	```Bash
+	git clone https://github.com/ferreiro/dotfiles.git && cd dotfiles && chmod +x dotfiles.sh && ./dotfiles.sh
+	```
 
 
 ### Goals with this repository
