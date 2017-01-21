@@ -32,11 +32,8 @@ There are two options:
 - The first is cloning the repository into your computer and then execute
 `install.sh` script.
 
-- The second form is done by using `curl`. Just type the following command in the folder you want to download the dotfiles.
+- `Coming soon` One line Installation
 
-```
-curl -s https://raw.githubusercontent.com/ferreiro/dotfiles/master/auto.sh
-```
 
 ### Goals with this repository
 
