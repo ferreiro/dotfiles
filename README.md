@@ -94,7 +94,7 @@ There are two options:
 
 Note: After the program finishh (6) you may want to install extra programs from AppStore or configure programs. See configuration guide below:
 
-- Iterm2 ([How to configure using your Dotfiles](config/iterm2_profile/README.md))
+- Iterm2 ([How to configure using your Dotfiles](api/config/iterm2_profile/README.md))
 
 ###<a name="install_cloud"/>![](api/assets/gdrive.jpg) Installing Dotfiles using Google Drive
 
