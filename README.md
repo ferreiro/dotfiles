@@ -15,7 +15,7 @@
 - [Special thanks](#thanks)
 - [Contact](#contact)
 
-#<a name="welcome"></a>Welcome to JF~Dotfiles!
+# <a name="welcome"></a>Welcome to JF~Dotfiles!
 <img src="api/assets/mac.png" />
 
 Hi! Welcome to JF~Dotfiles repository. I spent the last two days and half crafting and learning how to make my own Dotfiles. I'm really proud of the result and can't wait to improve them and make more cool features in the following months. If you have some ideas, I'll be happy to open this repository to contributions (read ['how to make suggestions'](#contribute) below).
@@ -45,11 +45,11 @@ There are two options:
 2. Analyzing why Dotfiles are so useful and learn how to make them properly.
 3. Making the program easy to understand and open to modification (Choosing a good structure for future improvements, modifications and community improvements).
 
-#<a name="install"></a>Installation Guide
+# <a name="install"></a>Installation Guide
 
 **Note:** Tested on OS X Sierra 10.12.0 and El Capitan 10.11.4 using iMac (Mid 2011) and Mac Book Pro Retina (Early 2015).
 
-###![](api/assets/folder.png) Installing Dotfiles locally
+### ![](api/assets/folder.png) Installing Dotfiles locally
 
 <img src="api/assets/installation.gif" />
 
@@ -96,7 +96,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 
 - Iterm2 ([How to configure using your Dotfiles](api/config/iterm2_profile/README.md))
 
-###<a name="install_cloud"/>![](api/assets/gdrive.jpg) Installing Dotfiles using Google Drive
+### <a name="install_cloud"/>![](api/assets/gdrive.jpg) Installing Dotfiles using Google Drive
 
 > I recommend you to store your dotfiles on Google Drive (Dropbox, etc...) instead of your local mac.
 
@@ -138,7 +138,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 	% Password: <your_computer_password>
 	```
 
-###<a name="uninstall"/>![](api/assets/uninstall.png) Uninstalling Dotfiles
+### <a name="uninstall"/>![](api/assets/uninstall.png) Uninstalling Dotfiles
 
 > **Warning:** I am currently working on this feature and is not 100% finished. So only execute it if you have some experience with Dotfiles and understand the code.
 
@@ -168,7 +168,7 @@ Note: After the program finishh (6) you may want to install extra programs from 
 
 ********
 
-#<a name="contribute"/> Contribute
+# <a name="contribute"/> Contribute
 
 I started this repo as a personal project. But If you have some ideas I'll be happy to open this repository to contributions.
 
@@ -177,7 +177,7 @@ I started this repo as a personal project. But If you have some ideas I'll be ha
 - Have you made improvements on the code and want to appear on the project? [Propose a pull request](https://github.com/ferreiro/dotfiles/pulls/).
 
 
-#<a name="newbie"/> New to Dotfiles? Don't be panic!
+# <a name="newbie"/> New to Dotfiles? Don't be panic!
 
 I know that feeling. You are starting to see all that strange bash scripts and you don't know what's going on. Don't be panic, all of us had felt something like this at certain point ;). I recommend you start by reading these articles (they helped me a lot):
 
@@ -186,7 +186,7 @@ I know that feeling. You are starting to see all that strange bash scripts and y
 - [Popular repositories by JF](https://github.com/Ferreiros-lab/popular-dotfiles.git) is a list of useful Dotfiles Repositories I created to get Ideas from.
 - [Vítor’s dotfiles](https://github.com/vitorgalvao/dotfiles)  is a good example of how to modularize dotfiles.
 
-#<a name="thanks"/> Special thanks
+# <a name="thanks"/> Special thanks
 
 I want to give special thanks to some amazing developers who shared publicly their Dotfiles, letting the community to learn from their work.
 
@@ -198,7 +198,7 @@ Thanks to them I've learned to make my Dotfiles even better. I strongly recommen
 
 Also I included the auto download feature using curl from this [repo](https://github.com/blorente/dotfiles).
 
-#<a name="contact"/>Contact
+# <a name="contact"/>Contact
 
 If you have some doubts or want to stay in touch I'll be happy to help you out or collaborate on new projects. You can reach me here:
 
