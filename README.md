@@ -198,9 +198,18 @@ Thanks to them I've learned to make my Dotfiles even better. I strongly recommen
 
 Also I included the auto download feature using curl from this [repo](https://github.com/blorente/dotfiles).
 
-# <a name="contact"/>Contact
+## Contribute
+
+💬 [Create a new Pull Request](https://github.com/ferreiro/dotfiles/pulls)
+
+## <a name="contact"/>My social networks
 
 If you have some doubts or want to stay in touch I'll be happy to help you out or collaborate on new projects. You can reach me here:
 
-- **Website:** [Jorge Ferreiro >](http://www.ferreiro.me)
-- **Contact:** [Contact form and email >](http://www.ferreiro.me/contact)
+* Twitter: [https://www.twitter.com/jgferreiro](https://www.twitter.com/jgferreiro)
+* Linkedin: [https://www.linkedin.com/in/jgferreiro/](https://www.linkedin.com/in/jgferreiro/)
+* Instagram: [https://www.instagram.com/jgferreiro/](https://www.instagram.com/jgferreiro/)
+
+Also you can find me on:
+* **Website:** [Jorge Ferreiro >](http://www.ferreiro.me)
+* **Contact:** [Contact form and email >](http://www.ferreiro.me/contact)
